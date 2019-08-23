@@ -29,14 +29,30 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+   
+   `.forEach` doesn't return a new array, while `.map` does.
 
 2. What is the difference between a function and a method?
 
+    I'm tempted to say that there really is no difference, both of them are created to perform some task and are attached to an object(i.e function is attached to an implicit global object, method is attached to a created object). I guess the only difference is that a function can be called on it's own while a method has to be attached to an object.
+
 3. What is closure?
+
+    A closure gives us access to an outer function’s scope from an inner function. It is typically created at the time of the inner function's declaration or creation. The inner function is said to enclose the outer function's scope, thereby have access to it's variables.
 
 4. Describe the four rules of the 'this' keyword.
 
+    * 1. Calling a function in the global environment without attaching it to an object as a method, or binding it explicitly, sets the global object(window) as `this`.
+
+    * 2. Calling a method on an object where `this` is referenced, sets the `this` keyword to the object to the left of the method call.
+    
+    * 3. When invoking a constructor function with the `new` operator, the `this` keyword gets set to the newly created object.
+
+    * 4. Functions can be bound to any objects of our choosing, by using either call or apply to set the `this` keyword at function calls, or bind to return a function that has been bound to a specified object. This sets `this` to the bound objects.
+
 5. Why do we need super() in an extended class?
+
+    super refers to the parent class constructor, super() is used to call the parent class constructor and attach the params, properties etc. to the extended class' constructor.
 
 ## Project Set up
 
