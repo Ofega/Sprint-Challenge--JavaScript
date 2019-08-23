@@ -111,14 +111,14 @@
   The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
 
   */
-  let animalNames = [];
+  const animalNames = [];
 
   zooAnimals.forEach(animal => {
     const animalDetails = `Name: ${animal.animal_name}, Scientific: ${animal.scientific_name}.`
-    animalNames = [...animalNames, animalDetails]
+    animalNames.push(animalDetails);
   });
 
-  // console.log(animalNames);
+  console.log(animalNames);
 
 
   /* Request 2: .map()    
